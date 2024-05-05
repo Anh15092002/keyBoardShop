@@ -41,13 +41,13 @@
 						<div class="form-group">
 							<label for="phone">Số điện thoại</label> <input type="text"
 								class="form-control" id="phone" th:field="*{phone}"> <small
-								id="phone" class="text-danger"
+								id="phone-error" class="text-danger"
 								th:if="${#fields.hasErrors('phone')}">Hãy nhập đúng số điện thoại</small>
 						</div>
 						<div class="form-group">
 							<label for="address">Địa chỉ:</label> <input type="text"
 								class="form-control" id="address" th:field="*{address}">
-							<small id="address" class="text-danger"
+							<small id="address-error" class="text-danger"
 								th:if="${#fields.hasErrors('address')}">Hãy nhập địa chỉ</small>
 						</div>
 					</div>
