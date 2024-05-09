@@ -27,12 +27,13 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-2" th:each="item : ${productSuggest}">
-						<div class="card">
-							<a th:href="@{'/home/item/'+${item.productId}}"><img class="card-img-top"
-								th:src="@{'/getproduct/'+${item.image}}" alt="..." /></a>
+						<div class="card" style="height: 270px">
+							<div class="d-flex justify-content-center align-items-center" style="height: 100px;">
+								<a th:href="@{'/home/item/'+${item.productId}}"><img class="card-img-top" th:src="@{'/getproduct/'+${item.image}}" alt="..." /></a>
+							</div>
 							<div class="card-body p-0 text-center">
-								<p class="card-title"
-									style="font-weight: bold; font-size: 17px;">
+								<p class="card-title d-flex justify-content-center align-items-center"
+									style="font-weight: bold; font-size: 17px; height: 75px;">
 									<a th:href="@{'/home/item/'+${item.productId}}" th:text="${item.name}"></a>
 								</p>
 								<p style="font-weight: 700;" th:text="${#numbers.formatDecimal(item.unitPrice - (item.unitPrice * item.discount/100), 1, 'DEFAULT', 0, 'DEFAULT')}+ ' VNĐ'"></p>
